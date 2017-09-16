@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <h1>Acess Logs</h1>
+    <hr>
+    <div class="container">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="log in logs">
+                <b>Log:</b> {{log.Id}} - <b>Duration:</b> {{log.Duration}}  - <b>Date:</b> {{log.AcessDate}}
+            </li>
+        </ul>
+
+        <div ng-show="logs == null">No Logs found</div>
+    </div>
+
+
+</body>
+</html>

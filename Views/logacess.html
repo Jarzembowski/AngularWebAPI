@@ -1,0 +1,19 @@
+﻿<hr>
+<body data-ng-app="LogAcessModule">
+
+    <div class="containter" ng-controller="LogAcessController">
+        <div class="row" ng-repeat="log in logs">
+            <div class="col-md-4">
+                Log Acess: {{log.Id}}
+            </div>
+            <div class="col-md-4">
+                Duration: {{log.Duration}}
+            </div>
+            <div class="col-md-4">
+                Date: {{log.AcessDate}}
+            </div>
+        </div>
+    </div>
+</body>
+
+

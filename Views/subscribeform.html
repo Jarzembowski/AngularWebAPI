@@ -1,0 +1,38 @@
+﻿<style>
+    table, tr, td, th {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+    }
+</style>
+<h2>Complete list</h2>
+<body>
+    <div id="tblSubs">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Email ID</th>
+                <th>Subscribed Date</th>
+            </tr>
+            <tbody data-ng-repeat="sub in subscriber">
+                <tr>
+                    <td>{{sub.Id}}</td>
+                    <td ng-blur="updSubscriber(sub,$event)" ng-dblclick="makeEditable($event)">{{sub.Email}}</td>
+                    <td>{{sub.SubscribeDate}}</td>
+                    <td> <input type="button" id="Delete" value="Delete" class="btn btn-danger" ng-click="dltSubscriber(sub.Id)" /> </td>
+                    <td> <input type="button" id="log" value="Acess Log" class="btn btn-primary" ng-click="acessLog(sub.Id)" /> </td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+
+        <div class="form-group">
+            <label for="email"><h3>Subscribe here</h3></label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" [required="string" ] ng-model="email" />
+
+        </div>
+        <button type="button" class="btn btn-primary" ng-click="saveSubs()">Submit</button>
+
+    </div>
+</body>
+<hr />
